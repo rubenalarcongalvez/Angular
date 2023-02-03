@@ -1,0 +1,11 @@
+<h2>Gifs-App</h2>
+
+<hr/>
+
+<ul class="list-group">
+  <li *ngFor="let entrada of historial" class="list-group-item p-0">
+    <button (click)="buscar(entrada)" class="w-100 py-2 bg-transparent border border-0 text-start ps-3">
+      <span> {{entrada | titlecase}} </span>
+    </button>
+  </li>
+</ul>

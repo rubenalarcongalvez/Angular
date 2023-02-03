@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+#contador {
+  display: flex;
+  gap: 8px;
+}
+
+#base > span {
+  color: blue;
+}
+
+#restablecer {
+  margin-top: 5px;
+  background-color: lime;
+  border: 1px solid gray;
+  border-radius: 5px;
+
+  &:hover {
+    border: 2px solid red;
+  }
+}

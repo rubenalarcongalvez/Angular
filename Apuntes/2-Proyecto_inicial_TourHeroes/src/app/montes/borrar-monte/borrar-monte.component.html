@@ -1,0 +1,14 @@
+<form (ngSubmit)="borrar()">
+  <h2>Borrar: </h2>
+
+  <input
+    type="number"
+    required
+    placeholder="Número"
+    min="1"
+    max="{{montes.length}}"
+    name="numero"
+    [(ngModel)]="posicion"
+  />
+  <button type="submit" class="bg-danger text-white border">Borrar</button>
+</form>

@@ -1,0 +1,30 @@
+h2 {
+  @media (max-width: 840px) {
+    font-size: x-large;
+  }
+
+  @media (max-width: 770px) {
+    font-size: larger;
+  }
+}
+
+li {
+  button {
+    @media (max-width: 770px) {
+      font-size: 12px;
+    }
+
+    span {
+      word-wrap: break-word;
+    }
+  }
+}
+
+li:hover {
+  background-color: darkblue;
+  border: 2px solid blue;
+
+  button {
+    color: white;
+  }
+}

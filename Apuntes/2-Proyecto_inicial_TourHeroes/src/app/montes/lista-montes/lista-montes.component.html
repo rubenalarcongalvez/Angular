@@ -1,0 +1,7 @@
+<h3>Montes</h3>
+<hr />
+<ol>
+  <li *ngFor="let monte of montes; index as i">
+    {{ monte.nombre | titlecase }} - {{ monte.altura | number }}
+  </li>
+</ol>

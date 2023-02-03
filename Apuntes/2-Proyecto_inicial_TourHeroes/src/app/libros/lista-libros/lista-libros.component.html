@@ -1,0 +1,31 @@
+<span
+  style="
+    font-size: 10rem;
+    background-color: aqua;
+    border-radius: 10px;
+    text-align: center;
+  "
+>
+  Lista de libros
+</span>
+
+<ul>
+  <li *ngFor="let libro of libros; index as i">
+    {{ i + 1 }} - {{ libro | titlecase }}
+  </li>
+</ul>
+
+<button
+  (click)="borrarElemento()"
+  style="background-color: red; color: white; border-radius: 5px"
+>
+  Borrar último libro
+</button>
+
+<div *ngIf="libroBorrado; else noBorrado"> <!-- Si libroBorrado está vacío, no lo muestra el div -->
+  <h3>Libro borrado: <span style="color: blue"> {{ libroBorrado | titlecase }} </span></h3>
+</div>
+
+<ng-template #noBorrado>
+  <h3>No se ha borrado ningún libro</h3>
+</ng-template>
