@@ -1,0 +1,40 @@
+<h2>Formularios reactivos</h2>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <form [formGroup]="miFormulario">
+      <!-- Nombre -->
+      <div class="row">
+        <label class="col-sm3 col form-label"> Nombre </label>
+        <div class="col-sm-6">
+          <input type="text" class="form-control" formControlName="nombre" />
+
+          <span
+            class="form-text text-danger"
+            *ngIf="miFormulario.controls['nombre'].errors && miFormulario.controls['nombre'].touched"
+            >No puede estar vacío</span
+          >
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<span>Valido</span>
+<pre>{{ miFormulario.valid }}</pre>
+
+<span>Pristine (no modificado)</span>
+<pre>{{ miFormulario.pristine }}</pre>
+
+<span>Dirty (modificado)</span>
+<pre>{{ miFormulario.dirty }}</pre>
+
+<span>Touched</span>
+<pre>{{ miFormulario.touched }}</pre>
+
+<span>Valor</span>
+<pre>{{ miFormulario.value | json }}</pre>
+
+<span>Errors</span>
+<pre>{{ miFormulario.controls["nombre"].errors | json }}</pre>

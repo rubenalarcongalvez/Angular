@@ -6,19 +6,29 @@ import { AppComponent } from './app.component';
 import { AppContador } from './contador/contador.component';
 import { LibrosModule } from './libros/libros.module';
 import { MontesModule } from './montes/montes.module';
+import { ApprutasComponent } from './apprutas/apprutas.component';
+import { RouterModule } from '@angular/router';
+import { RutasModule } from './rutas.module';
+import { FormreactivosComponent } from './formreactivos/formreactivos.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppContador
+    AppContador,
+    ApprutasComponent,
+    FormreactivosComponent,
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     AppRoutingModule,
     LibrosModule,
-    MontesModule
+    MontesModule,
+    RutasModule,
+    ReactiveFormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

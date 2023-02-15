@@ -1,17 +1,16 @@
-<span
+<h1
   style="
-    font-size: 10rem;
     background-color: aqua;
     border-radius: 10px;
     text-align: center;
   "
 >
   Lista de libros
-</span>
+</h1>
 
 <ul>
   <li *ngFor="let libro of libros; index as i">
-    {{ i + 1 }} - {{ libro | titlecase }}
+    <a [routerLink]="['/libro', libro]"> {{ i + 1 }} - {{ libro | titlecase }} </a>
   </li>
 </ul>
 

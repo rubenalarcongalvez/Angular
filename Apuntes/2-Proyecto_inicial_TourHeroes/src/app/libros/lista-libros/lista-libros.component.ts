@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lista-libros',
   templateUrl: './lista-libros.component.html',
   styles: [],
 })
-export class ListaLibrosComponent {
+export class ListaLibrosComponent implements OnInit {
   libros: string[] = [
     '1984',
     'un mundo feliz',
@@ -15,6 +16,19 @@ export class ListaLibrosComponent {
   ];
 
   libroBorrado: string = '';
+  libroid!: string;
+
+  constructor(private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.activatedRoute.params.subscribe({
+      next: (params) => {
+        console.log(params);
+        this.libroid = params['id'];
+        console.log(this.libroid);
+      },
+    });
+  }
 
   getRandomArbitrary(min: number, max: number) {
     return Math.random() * (max - min) + min;

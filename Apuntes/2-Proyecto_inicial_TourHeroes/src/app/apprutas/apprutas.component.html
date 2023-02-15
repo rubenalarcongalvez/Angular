@@ -1,0 +1,31 @@
+<h1>Mis rutas</h1>
+<hr />
+<div class="row">
+  <div class="col-auto">
+    <ul class="list-group" style="width: fit-content">
+      <a
+        class="list-group-item list-group-item-action"
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Contador</a
+      >
+      <a
+        class="list-group-item list-group-item-action"
+        routerLink="libros"
+        routerLinkActive="active"
+        >Libros</a
+      >
+      <a
+        class="list-group-item list-group-item-action"
+        routerLink="montes"
+        routerLinkActive="active"
+        >Montes</a
+      >
+    </ul>
+  </div>
+
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
