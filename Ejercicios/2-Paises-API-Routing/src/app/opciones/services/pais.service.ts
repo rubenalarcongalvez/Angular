@@ -11,7 +11,6 @@ export class PaisService {
   public _resultadosCapital: Pais[] = [];
   public _paisEspecifico: Pais[] = [];
   public _error: boolean = false;
-  public _limpio: boolean = true;
 
   constructor(private http: HttpClient) {
     this._resultadosPais =
