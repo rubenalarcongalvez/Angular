@@ -14,16 +14,16 @@
       <h2>Information</h2>
       <ul class="list-group">
         <li class="list-group-item">
-          <span class="fw-bold">Population </span>{{ pais.name.common }}
+          <span class="fw-bold">Population </span>{{ pais.population | number }}
         </li>
         <li class="list-group-item">
-          <span class="fw-bold">Country code </span>{{ pais.name.common }}
+          <span class="fw-bold">Country code </span>{{ pais.ccn3 | number }}
         </li>
         <li class="list-group-item">
-          <span class="fw-bold">Alpha3 code </span>{{ pais.name.common }}
+          <span class="fw-bold">Alpha3 code </span>{{ pais.cca3 }}
         </li>
         <li class="list-group-item">
-          <span class="fw-bold">Capital </span>{{ pais.name.common }}
+          <span class="fw-bold">Capital </span>{{ pais.capital }}
         </li>
       </ul>
     </div>
