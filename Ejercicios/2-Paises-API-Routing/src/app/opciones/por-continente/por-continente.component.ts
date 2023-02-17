@@ -27,7 +27,11 @@ export class PorContinenteComponent {
   }
 
   get error(): boolean {
-    return this.paisService._error;
+    if (!this.busqueda) {
+      return false;
+    } else {
+      return this.paisService._error;
+    }
   }
 
   get resultados() {
