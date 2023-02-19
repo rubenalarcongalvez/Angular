@@ -18,10 +18,18 @@
           <span
             class="form-text text-danger"
             *ngIf="
-              miFormulario.controls['nombre'].errors &&
+              miFormulario.controls['nombre'].errors?.['required'] &&
               miFormulario.controls['nombre'].touched
             "
-            >No puede estar vacío y debe tener más de 5 caracteres</span
+            >No puede estar vacío</span
+          >
+          <span
+            class="form-text text-danger"
+            *ngIf="
+              miFormulario.controls['nombre'].errors?.['minlength'] &&
+              miFormulario.controls['nombre'].touched
+            "
+            >Debe tener más de 4 caracteres</span
           >
         </div>
       </div>
@@ -98,6 +106,9 @@
 <pre>{{ miFormulario.dirty }}</pre>
 
 <span>Touched</span>
+<pre>{{ miFormulario.touched }}</pre>
+
+<span>Untouched</span>
 <pre>{{ miFormulario.touched }}</pre>
 
 <span>Valor</span>
