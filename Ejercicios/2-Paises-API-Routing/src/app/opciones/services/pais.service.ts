@@ -9,18 +9,18 @@ export class PaisService {
   public _resultadosPais: Pais[] = [];
   public _resultadosContinente: Pais[] = [];
   public _resultadosCapital: Pais[] = [];
-  public _paisEspecifico: Pais[] = [];
+  public _paisEspecifico: Pais;
   public _error: boolean = false;
 
   constructor(private http: HttpClient) {
     this._resultadosPais =
-      JSON.parse(localStorage.getItem('resultados')!) || [];
+      JSON.parse(localStorage.getItem('resultadosPais')!) || [];
     this._resultadosContinente =
-      JSON.parse(localStorage.getItem('resultados')!) || [];
+      JSON.parse(localStorage.getItem('resultadosContinente')!) || [];
     this._resultadosCapital =
-      JSON.parse(localStorage.getItem('resultados')!) || [];
+      JSON.parse(localStorage.getItem('resultadosCapital')!) || [];
     this._paisEspecifico =
-      JSON.parse(localStorage.getItem('paisEspecifico')!) || [];
+      JSON.parse(localStorage.getItem('paisEspecifico')!) || 0;
   }
 
   buscarPaisService(txt: string) {
@@ -36,7 +36,7 @@ export class PaisService {
         next: (resp) => {
           this._resultadosPais = resp;
           localStorage.setItem(
-            'resultados',
+            'resultadosPais',
             JSON.stringify(this._resultadosPais)
           );
         },
@@ -59,7 +59,7 @@ export class PaisService {
         next: (resp) => {
           this._resultadosContinente = resp;
           localStorage.setItem(
-            'resultados',
+            'resultadosContinente',
             JSON.stringify(this._resultadosContinente)
           );
         },
@@ -82,7 +82,7 @@ export class PaisService {
         next: (resp) => {
           this._resultadosCapital = resp;
           localStorage.setItem(
-            'resultados',
+            'resultadosCapital',
             JSON.stringify(this._resultadosCapital)
           );
         },
@@ -97,7 +97,7 @@ export class PaisService {
       .get<Pais[]>('https://restcountries.com/v3.1/alpha/' + txt)
       .subscribe({
         next: (resp) => {
-          this._paisEspecifico = resp;
+          this._paisEspecifico! = resp[0];
           localStorage.setItem(
             'paisEspecifico',
             JSON.stringify(this._paisEspecifico)

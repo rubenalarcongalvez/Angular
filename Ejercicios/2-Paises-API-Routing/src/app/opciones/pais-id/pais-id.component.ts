@@ -20,6 +20,6 @@ export class PaisIdComponent implements OnInit {
   }
 
   get pais() {
-    return this.paisService._paisEspecifico[0];
+    return this.paisService._paisEspecifico;
   }
 }
