@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center mb-2">
+  <button class="btn btn-warning" routerLink="">Inicio</button>
+</div>
+<h2>Searches</h2>
+
+<hr />
+
+<ul class="list-group">
+  <a
+    class="list-group-item p-2"
+    routerLink="por-pais"
+    routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >By country</a
+  >
+  <a
+    class="list-group-item p-2"
+    routerLink="por-continente"
+    routerLinkActive="active"
+    >By region</a
+  >
+  <a
+    class="list-group-item p-2"
+    routerLink="por-capital"
+    routerLinkActive="active"
+    >By capital</a
+  >
+</ul>

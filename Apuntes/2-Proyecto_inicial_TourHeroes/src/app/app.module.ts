@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { RutasModule } from './rutas.module';
 import { FormreactivosComponent } from './formreactivos/formreactivos.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormreactivosPRACTICARComponent } from './formreactivosPRACTICAR/formreactivosPRACTICAR.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppContador,
     ApprutasComponent,
     FormreactivosComponent,
+    FormreactivosPRACTICARComponent
   ],
   imports: [
     BrowserModule,
