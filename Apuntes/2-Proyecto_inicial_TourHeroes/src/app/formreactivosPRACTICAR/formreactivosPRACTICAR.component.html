@@ -15,22 +15,26 @@
             formControlName="nombre"
           />
 
-          <span
-            class="form-text text-danger"
-            *ngIf="
-              miFormulario.controls['nombre'].errors?.['required'] &&
-              miFormulario.controls['nombre'].touched
-            "
-            >No puede estar vacío</span
-          >
-          <span
-            class="form-text text-danger"
-            *ngIf="
-              miFormulario.controls['nombre'].errors?.['minlength'] &&
-              miFormulario.controls['nombre'].touched
-            "
-            >Debe tener más de 4 caracteres</span
-          >
+          <ul *ngIf="miFormulario.controls['nombre'].errors">
+            <li
+              class="form-text text-danger"
+              *ngIf="miFormulario.controls['nombre'].errors?.['required'] && miFormulario.controls['nombre'].touched"
+            >
+              No puede estar vacío
+            </li>
+            <li
+              class="form-text text-danger"
+              *ngIf="miFormulario.controls['nombre'].errors?.['minlength'] && miFormulario.controls['nombre'].touched"
+            >
+              Debe tener más de 4 caracteres
+            </li>
+            <li
+              class="form-text text-danger"
+              *ngIf="miFormulario.controls['nombre'].errors?.['maxlength'] && miFormulario.controls['nombre'].touched"
+            >
+              Debe tener menos de 25 caracteres
+            </li>
+          </ul>
         </div>
       </div>
       <div class="row mt-3">
@@ -42,15 +46,20 @@
             formControlName="nacimiento"
           />
 
-          <span
-            class="form-text text-danger"
-            *ngIf="
-              miFormulario.controls['nacimiento'].errors &&
-              miFormulario.controls['nacimiento'].touched
-            "
-            >No puede estar vacío y el año de nacimiento debe ser mayor a
-            1920</span
-          >
+          <ul *ngIf="miFormulario.controls['nacimiento'].errors">
+            <li
+              class="form-text text-danger"
+              *ngIf="miFormulario.controls['nacimiento'].errors?.['min'] && miFormulario.controls['nacimiento'].touched"
+            >
+              Ya estarías muerto si nacieras en ese año capullín
+            </li>
+            <li
+              class="form-text text-danger"
+              *ngIf="miFormulario.controls['nacimiento'].errors?.['max'] && miFormulario.controls['nacimiento'].touched"
+            >
+              Todavía ni hubieras nacido, venga ya
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -60,7 +69,7 @@
           type="radio"
           id="flexRadioDefault1"
           value="S"
-          formControlName="tieneHijos"
+          formControlName="acepta"
         />
         <label class="form-check-label" for="flexRadioDefault1"> Sí </label>
       </div>
@@ -70,19 +79,12 @@
           type="radio"
           id="flexRadioDefault2"
           value="N"
-          formControlName="tieneHijos"
+          formControlName="acepta"
         />
         <label class="form-check-label" for="flexRadioDefault2"> No </label>
       </div>
 
-      <span
-        class="form-text text-danger"
-        *ngIf="
-          miFormulario.controls['tieneHijos'].errors &&
-          miFormulario.controls['tieneHijos'].touched
-        "
-        >No puede estar vacio</span
-      >
+      <span *ngIf="miFormulario.controls['acepta'].value == 'N'" class="form-text text-danger">Tienes que aceptar los términos y condiciones</span>
 
       <div class="row mt-3">
         <div class="col-9">

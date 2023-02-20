@@ -3,7 +3,7 @@
 
 <div class="row">
   <div class="col">
-    <form>
+    <form [formGroup]="miFormulario" (ngSubmit)="guardar()">
       <!-- Cuando se le de al submit, ejecuta el método guardar() -->
       <!-- Nombre -->
       <div class="row">
@@ -12,14 +12,23 @@
           <input
             type="text"
             class="form-control bg-dark text-white"
+            formControlName="nombre"
           />
 
           <span
             class="form-text text-danger"
+            *ngIf="
+              miFormulario.controls['nombre'].errors?.['required'] &&
+              miFormulario.controls['nombre'].touched
+            "
             >No puede estar vacío</span
           >
           <span
             class="form-text text-danger"
+            *ngIf="
+              miFormulario.controls['nombre'].errors?.['minlength'] &&
+              miFormulario.controls['nombre'].touched
+            "
             >Debe tener más de 4 caracteres</span
           >
         </div>
@@ -35,6 +44,10 @@
 
           <span
             class="form-text text-danger"
+            *ngIf="
+              miFormulario.controls['nacimiento'].errors &&
+              miFormulario.controls['nacimiento'].touched
+            "
             >No puede estar vacío y el año de nacimiento debe ser mayor a
             1920</span
           >
@@ -64,6 +77,10 @@
 
       <span
         class="form-text text-danger"
+        *ngIf="
+          miFormulario.controls['tieneHijos'].errors &&
+          miFormulario.controls['tieneHijos'].touched
+        "
         >No puede estar vacio</span
       >
 
