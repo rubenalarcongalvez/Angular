@@ -1,0 +1,28 @@
+<div class="d-flex gap-3 mb-3">
+  <h3>Buscar</h3>
+  <button (click)="limpiar()" class="btn btn-primary">Limpiar gifs</button>
+</div>
+
+<input
+  type="text"
+  name="buscador"
+  id="buscador"
+  placeholder="Buscar gifs..."
+  autofocus
+  class="w-100 form-control"
+  [(ngModel)]="busqueda"
+  (keyup.enter)="buscar(busqueda)"
+/>
+<!-- #busqueda -->
+
+<ul style="list-style: none" class="p-0 pt-3 gap-2 container-fluid">
+  <li class="row" style="row-gap: 1rem">
+    <div
+      class="d-flex flex-column col-12 col-sm-6 col-md-4 col-lg-3"
+      *ngFor="let gif of gifs"
+    >
+      <img [src]="gif.images.downsized.url" class="rounded" alt="gif" />
+      <span> {{ gif.title | titlecase }} </span>
+    </div>
+  </li>
+</ul>

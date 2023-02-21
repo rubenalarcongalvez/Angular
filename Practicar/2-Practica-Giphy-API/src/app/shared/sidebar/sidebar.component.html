@@ -1,0 +1,23 @@
+<h2>Gifs-App</h2>
+
+<hr />
+
+<ul class="list-group">
+  <li class="list-group-item p-0" *ngFor="let entrada of historial">
+    <button
+      class="w-100 py-2 bg-transparent border border-0 text-start ps-3"
+      (click)="buscar(entrada)"
+      *ngIf="entrada != busqueda; else boton"
+    >
+      <span> {{ entrada | titlecase }} </span>
+    </button>
+    <ng-template #boton>
+      <button
+        class="w-100 py-2 bg-primary border border-0 text-white text-start ps-3 rounded"
+        (click)="buscar(entrada)"
+      >
+        <span> {{ entrada | titlecase }} </span>
+      </button>
+    </ng-template>
+  </li>
+</ul>
