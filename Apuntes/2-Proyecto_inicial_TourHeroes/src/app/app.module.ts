@@ -28,7 +28,7 @@ import { FormreactivosPRACTICARComponent } from './formreactivosPRACTICAR/formre
     LibrosModule,
     MontesModule,
     RutasModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

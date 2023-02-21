@@ -10,12 +10,14 @@ import { MontesService } from '../servicios/montes.service';
 
 export class MainPageComponent {
 
-  montes: Monte[] = [];
+  get montes() {
+    return this.MontesService.montes;
+  }
 
   constructor (private MontesService: MontesService) {}
 
   agregarNuevoMonte(monte: Monte) {
-    this.montes.push(monte);
+    this.MontesService.agregarMonte(monte);
   }
 }
 

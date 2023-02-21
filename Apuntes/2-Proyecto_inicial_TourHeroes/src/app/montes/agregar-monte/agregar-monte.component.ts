@@ -7,19 +7,21 @@ import { MontesService } from '../servicios/montes.service';
   templateUrl: './agregar-monte.component.html',
 })
 export class AgregarMonteComponent {
+  @Output('nuevo-monte') onNuevoMonte: EventEmitter<Monte> = new EventEmitter();
+
   nuevo: Monte = {
     nombre: '',
     altura: 0,
   };
 
-  constructor (private montesService: MontesService) {}
+  // constructor (private montesService: MontesService) {}
 
   agregar() {
     if (!this.nuevo.nombre.trim() || this.nuevo.altura <= 0) {
       return;
     }
 
-    this.montesService.agregarMonte(this.nuevo);
+    this.onNuevoMonte.emit(this.nuevo);
 
     this.nuevo = {
       nombre: '',
