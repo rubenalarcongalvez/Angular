@@ -1,0 +1,52 @@
+<h2>Dashboard</h2>
+<hr>
+
+<div class="row">
+
+  <div class="col-6 ml-3">
+    <h3>Productos disponibles</h3>
+    <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let producto of productos; index as i">
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ producto.nombre | titlecase }}</td>
+          <td>{{ producto.precio | currency:'EUR' }}</td>
+          <td>{{ producto.cantidad | number }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-6">
+    <h3>Lista de Clientes</h3>
+    <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Detalles</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let cliente of clientes; index as i">
+        <tr>
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ cliente.nombre | titlecase }}</td>
+          <td>{{ cliente.edad }}</td>
+          <td><a class="btn btn-sm btn-primary" [routerLink]="['/cliente', cliente.nombre]" >Ver</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

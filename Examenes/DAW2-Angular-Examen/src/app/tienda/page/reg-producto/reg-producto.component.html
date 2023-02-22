@@ -1,0 +1,94 @@
+<h2>Registrar nuevo producto</h2>
+<hr />
+
+<div class="row">
+  <div class="col ml-3">
+    <form
+      autocomplete="off"
+      [formGroup]="formProducto"
+      (ngSubmit)="registrar()"
+    >
+      <!-- Campo de producto -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Producto</label>
+        <div class="col-sm-9">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Nombre del producto"
+            formControlName="nombre"
+          />
+
+          <span
+            class="text-danger"
+            *ngIf="
+              formProducto.controls['nombre'].errors &&
+              formProducto.controls['nombre'].touched
+            "
+          >
+            Debes poner el nombre del producto
+          </span>
+        </div>
+      </div>
+
+      <!-- Campo de precio -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Precio</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Precio del producto"
+            formControlName="precio"
+          />
+
+          <span
+            class="text-danger"
+            *ngIf="
+              formProducto.controls['precio'].errors &&
+              formProducto.controls['precio'].touched
+            "
+          >
+            Debes poner el precio del producto
+          </span>
+        </div>
+      </div>
+
+      <!-- Campo de Cantidad -->
+      <div class="mb-3 row">
+        <label class="col-sm-3 col-form-label">Cantidad</label>
+        <div class="col-sm-9">
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Cantidad del producto"
+            formControlName="cantidad"
+          />
+
+          <span
+            class="text-danger"
+            *ngIf="
+              formProducto.controls['cantidad'].errors &&
+              formProducto.controls['cantidad'].touched
+            "
+          >
+            Debes poner la cantidad de producto
+          </span>
+        </div>
+      </div>
+
+      <!-- Boton Guardar -->
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary float-end">
+            Registrar
+          </button>
+        </div>
+
+        <span class="alert alert-success" *ngIf="registrado">
+          Producto registrado con éxito
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
