@@ -1,0 +1,35 @@
+/* Como vemos, podemos poner cosas específicas y sobreescribirá al tema predefinido */
+a {
+    color: blue;
+
+    &:hover,
+    &:focus {
+        color: green;
+    }
+}
+
+
+div#test {
+    display: flex;
+    justify-content: center;
+
+    button {
+        margin: 0;
+        text-align: center;
+        padding: 7.5px;
+        border: 1px dashed aqua;
+        border-radius: 7.5px;
+        color: aqua;
+        background-color: black;
+        font-size: 22px;
+        font-weight: bold;
+
+        &:hover {
+            transition: 0.25s;
+            font-size: 25px;
+            color: lime;
+            border: 2px solid lime;
+            cursor: pointer;
+        }
+    }
+}

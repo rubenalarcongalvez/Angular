@@ -1,0 +1,38 @@
+<a href="https://github.com/rubenalarcongalvez?tab=repositories" class="p-link">Hey, I'm working out!</a>
+
+<hr>
+
+<div class="card flex justify-content-center">
+  <p-button label="Hola Caracola" icon="pi pi-check" styleClass="mb-3"></p-button>
+</div>
+
+<p class="p-error p-fluid">Esto es un error</p>
+
+<div class="flex align-items-center justify-content-center">
+  <a (click)="changeTheme('vela-blue')" class="mr-3 cursor-pointer bg-blue-300 p-2 border-round">
+    Vela Blue
+  </a>
+  <a (click)="changeTheme('arya-blue')" class="mr-3 cursor-pointer bg-blue-300 p-2 border-round text-black-alpha-90">
+    Arya Blue
+  </a>
+  <a (click)="changeTheme('md-light-indigo')" class="mr-3 cursor-pointer bg-blue-900 p-2 border-round text-white">
+    Light Indigo
+  </a>
+  <a (click)="changeTheme('md-dark-indigo')" class="mr-3 cursor-pointer bg-purple-100 p-2 border-round text-black-alpha-90">
+    Dark Indigo
+  </a>
+  <a (click)="changeTheme('bootstrap4-light-purple')" class="mr-3 cursor-pointer bg-purple-500 p-2 border-round text-white">
+    Bootstrap Light Purple
+  </a>
+  <a (click)="changeTheme('bootstrap4-dark-purple')" class="mr-3 cursor-pointer bg-purple-300 p-2 border-round text-white">
+    Bootstrap Dark Purple
+  </a>
+  <a (click)="changeTheme('saga-blue')" class="mr-3 cursor-pointer bg-blue-500 p-2 border-round text-white">
+    Saga Blue
+  </a>
+</div>
+
+<div class="flex flex-column">
+  <h3 class="underline text-center text-green-500">Distinto CSS para este componente (click en el botón)</h3>
+  <div id="test"><button routerLink="scoped-css" class="p-text-secondary">Scoped CSS</button></div>
+</div>
