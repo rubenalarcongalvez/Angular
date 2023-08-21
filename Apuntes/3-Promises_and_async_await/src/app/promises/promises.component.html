@@ -1,0 +1,14 @@
+<h2 id="page-subtitle">Promises</h2>
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem;">
+    <div>
+        <input type="number" [(ngModel)]="num1">
+        <span> + </span>
+        <input type="number" [(ngModel)]="num2">
+    </div>
+
+    <button (click)="callbackFunc()">Perform operation with callback</button>
+    <button (click)="promiseFunc()">Perform operation with promise</button>
+
+    <p>{{ result }}</p>
+</div>
