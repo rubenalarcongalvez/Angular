@@ -1,0 +1,17 @@
+<div class="flex flex-column">
+  <h3 class="underline text-center text-green-500">
+    Página principal (pulsar el botón)
+  </h3>
+  <div id="test">
+    <button routerLink="" class="p-text-secondary">Home</button>
+  </div>
+</div>
+
+<div class="flex flex-column align-items-center justify-content-center">
+  <h2 class="text-blue-500 font-bold">Fecha de nacimiento</h2>
+  <p-calendar
+    [touchUI]="true"
+    [readonlyInput]="true"
+    dateFormat="dd-mm-yy"
+  ></p-calendar>
+</div>

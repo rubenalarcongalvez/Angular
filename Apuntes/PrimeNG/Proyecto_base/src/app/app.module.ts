@@ -1,5 +1,6 @@
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
+import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,7 @@ import { AppComponent } from './app.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ScopedThemeAppComponent } from './scoped-theme-app/scoped-theme-app.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 
 
@@ -16,7 +18,8 @@ import { PrincipalComponent } from './principal/principal.component';
   declarations: [
     AppComponent,
     ScopedThemeAppComponent,
-    PrincipalComponent
+    PrincipalComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +27,8 @@ import { PrincipalComponent } from './principal/principal.component';
     ButtonModule,
     TranslateModule.forRoot(),
     PanelModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,3 @@
-/* Como vemos, podemos poner cosas específicas y sobreescribirá al tema predefinido */
-a {
-    color: blue;
-
-    &:hover,
-    &:focus {
-        color: green;
-    }
-}
-
-
 div#test {
     display: flex;
     justify-content: center;
@@ -32,9 +21,4 @@ div#test {
             cursor: pointer;
         }
     }
-}
-
-//Podemos cambiar lo que queramos con la etiqueta ::ng-deep
-::ng-deep .p-button {
-    background-color: red;
 }

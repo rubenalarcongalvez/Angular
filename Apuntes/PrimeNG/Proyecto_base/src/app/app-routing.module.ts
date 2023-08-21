@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ScopedThemeAppComponent } from './scoped-theme-app/scoped-theme-app.component';
 import { PrincipalComponent } from './principal/principal.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,11 @@ const routes: Routes = [
     title: "Scoped CSS",
     path: 'scoped-css',
     component: ScopedThemeAppComponent
+  },
+  {
+    title: "Calendar",
+    path: 'calendar',
+    component: CalendarComponent
   },
   {
     title: "Página principal test",
