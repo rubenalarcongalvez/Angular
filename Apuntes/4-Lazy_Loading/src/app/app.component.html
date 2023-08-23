@@ -1,26 +1,42 @@
 <h1 id="page-title">Routes and Lazyload</h1>
 
-<ul>
-  <li>
-    <a routerLink="auth">Auth</a>
-    <ul>
-      <li><a routerLink="auth/login">Login</a></li>
-      <li><a routerLink="auth/register">Register</a></li>
-      <li><a routerLink="auth/forgot">Forgot password</a></li>
-    </ul>
-  </li>
-</ul>
+<main>
+  <ul>
+    <li>
+      <a routerLink="auth">Auth</a>
+      <ul>
+        <li><a routerLink="auth/login">Login</a></li>
+        <li><a routerLink="auth/register">Register</a></li>
+        <li><a routerLink="auth/forgot">Forgot password</a></li>
+      </ul>
+    </li>
+  </ul>
 
-<ul>
-  <li>
-    <a routerLink="products">Products</a>
-    <ul>
-      <li><a routerLink="products/add">Add</a></li>
-      <li><a routerLink="products/edit">Edit</a></li>
-      <li><a routerLink="products/list">List</a></li>
-      <li><a routerLink="products/product">Product</a></li>
-    </ul>
-  </li>
-</ul>
+  <ul>
+    <li>
+      <a routerLink="products">Products</a>
+      <ul>
+        <li><a routerLink="products/add">Add</a></li>
+        <li><a routerLink="products/edit">Edit</a></li>
+        <li><a routerLink="products/list">List</a></li>
+        <li><a routerLink="products/product">Product</a></li>
+      </ul>
+    </li>
+  </ul>
 
-<router-outlet></router-outlet>
+  <ul>
+    <li>
+      <a routerLink="users">Users</a>
+      <ul>
+        <li><a routerLink="users/new">Users</a></li>
+        <li><a routerLink="users/edit">Edit</a></li>
+        <li><a routerLink="users/list">List</a></li>
+        <li><a routerLink="users/user">User</a></li>
+      </ul>
+    </li>
+  </ul>
+</main>
+
+<div id="route">
+  <router-outlet></router-outlet>
+</div>

@@ -5,13 +5,15 @@ import { UsersRoutingModule } from './users-routing.module';
 import { NewComponent } from './pages/new/new.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { ListComponent } from './pages/list/list.component';
+import { UserComponent } from './pages/user/user.component';
 
 
 @NgModule({
   declarations: [
     NewComponent,
     EditComponent,
-    ListComponent
+    ListComponent,
+    UserComponent
   ],
   imports: [
     CommonModule,

@@ -16,6 +16,12 @@ const routes: Routes = [
     //Lazy Loading
     loadChildren: () => import('./products/products.module').then(m => m.ProductsModule)//.catch(m => m.TestModule)
   },
+  {
+    //We do the same as above with users
+    path: 'users',
+    //Lazy Loading
+    loadChildren: () => import('./users/users.module').then(m => m.UsersModule)//.catch(m => m.TestModule)
+  },
   //If we are going to put different components depending on the route path
   // {
   //   path: '',
