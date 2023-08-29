@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   form: FormGroup = new FormGroup({})
   isCheck: any;
   checkHuman: Array<any> = []
+  itemsForPipe: Array<string> = ["STEP_1", "STEP_2"]
 
   constructor(
     private fb: FormBuilder,

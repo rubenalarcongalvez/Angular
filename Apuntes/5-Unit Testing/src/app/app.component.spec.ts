@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { CustomTranslatePipe } from './pipe/custom-translate.pipe';
 
 //TODO: "spec.ts <--"
 //TODO: 😨 es la sintaxis de Jasmin!
@@ -14,10 +15,11 @@ describe(`(1) TEST del componente "AppComponent"`, () => {
       imports: [
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule//TODO: <-----
+        HttpClientTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        CustomTranslatePipe
       ],
     }).compileComponents();
 
