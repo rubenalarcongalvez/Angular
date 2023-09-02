@@ -25,3 +25,7 @@ button:hover {
     transition: .5s;
     background-color: limegreen;
 }
+
+.active-link {
+    background-color: blue;
+}

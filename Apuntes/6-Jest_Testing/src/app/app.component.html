@@ -1,7 +1,16 @@
 
 <br>
 
-<h1 class="container" id="page-title">{{ title }}</h1>
+<header>
+    <h1 class="container" id="page-title">{{ title }}</h1>
+    <nav>
+        <ul class="d-flex justify-content-center list-inline gap-2">
+            <li><button routerLink="basic/counter" routerLinkActive="active-link">Counter</button></li>
+            <li><button routerLink="basic/charizard" routerLinkActive="active-link">Charizard</button></li>
+            <li><button routerLink="basic/father" routerLinkActive="active-link">Father</button></li>
+        </ul>
+    </nav>
+</header>
 
 <div class="container">
     <router-outlet></router-outlet>
